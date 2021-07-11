@@ -1,0 +1,20 @@
+<div class="maindiv">
+
+<!-- heading -->
+<div id="container1" >
+       CHOOSE FROM OUR WIDE RANGE OF SERVICES<br>
+       <div style="font-size: 2em; color: white;">Our Services</div>
+ </div>
+<!-- end heading  -->
+
+<!-- list of services  -->
+<div id="container2">
+            <div class="row" >
+              <div class="col-sm" id="col" *ngFor='let servicedata of servicedatas' (click)="viewservice(servicedata)" >
+                 <img [src]=[servicedata.imagepath]><br>
+                {{servicedata.name}}<br>
+              </div>
+            </div>
+</div>
+<!-- end -->
+</div>

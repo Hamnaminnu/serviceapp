@@ -1,0 +1,24 @@
+<div class="maindiv">
+
+    <!-- heading -->
+    <div id="container1" >
+           <div style="font-size: 2em; color: white;">{{servicedata.name}}</div>
+     </div>
+    <!-- end heading  -->
+    
+    <!-- service -->
+    <div id="container2">
+                <div class="row" >
+                  <div class="col-sm" id="col">
+                     <img [src]=[servicedata.imagepath]><br><br>
+                    {{servicedata.name}}<br><br>
+                    <p>{{servicedata.description}}</p> 
+                    <a (click)="edit()" onMouseOver="this.style.color='red'"
+                    onMouseOut="this.style.color='grey'" style="color: grey;" >Click here to Edit</a>
+                  </div>
+                </div> 
+                 
+    </div>
+    <!-- end -->
+    
+</div>

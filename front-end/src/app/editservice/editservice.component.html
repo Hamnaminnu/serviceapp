@@ -1,0 +1,31 @@
+<div class="maindiv">
+
+    <!-- heading -->
+    <div id="container1" >
+           <div style="font-size: 2em; color: white;">{{servicedata.name}}</div>
+     </div>
+    <!-- end heading  -->
+    
+    <!-- service edit form  -->
+    <div id="container2">
+                <form class="container"    (ngSubmit)="edit()" #editvalidity='ngForm'>
+                    <div style="font-size: 2em; color: rgb(0, 0, 0); text-align: center;">Edit Service</div><br>
+                    <div class="form-group">
+                      <label for="img">Image :&nbsp;&nbsp;</label>
+                      <!-- image size must be less than 50kb -->
+                      <input type="file" class="form-control-file" id="img" value="{{servicedata.imagepath}}" accept="image/*" name="imagepath"  (change)="selectfile($event)" >
+                    </div><br>
+                    <div class="form-group">
+                        <label for="name">Name : </label>
+                        <input type="text" class="form-control" id="name" value="{{servicedata.name}}" name="name" [(ngModel)]="servicedata.name">
+                    </div><br>
+                    <div class="form-group">
+                        <label for="description">Description : </label><br>
+                        <textarea name="description" cols="40" rows="5" value="{{servicedata.description}}" [(ngModel)]="servicedata.description"></textarea>
+                    </div><br>
+                    <button type="submit" [disabled]='editvalidity.form.invalid'>ok</button>
+                </form>
+    </div>
+    <!-- end -->
+
+</div>
